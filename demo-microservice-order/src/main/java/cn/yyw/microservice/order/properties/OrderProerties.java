@@ -1,14 +1,14 @@
-package cn.itcast.microservice.order.properties;
+package cn.yyw.microservice.order.properties;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 /**
  * @author win10
- * @ConfigurationProperties(prefix="itcast") 以itcast开头的配置被匹配到
+ * @ConfigurationProperties(prefix="demo") 以demo开头的配置被匹配到
  */
 @Component
-@ConfigurationProperties(prefix = "itcast")
+@ConfigurationProperties(prefix = "demo")
 public class OrderProerties {
 
     private ItemProperties item = new ItemProperties();

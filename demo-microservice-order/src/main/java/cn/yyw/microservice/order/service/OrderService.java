@@ -1,8 +1,8 @@
-package cn.itcast.microservice.order.service;
+package cn.yyw.microservice.order.service;
 
-import cn.itcast.microservice.order.pojo.Item;
-import cn.itcast.microservice.order.pojo.Order;
-import cn.itcast.microservice.order.pojo.OrderDetail;
+import cn.yyw.microservice.order.pojo.Item;
+import cn.yyw.microservice.order.pojo.Order;
+import cn.yyw.microservice.order.pojo.OrderDetail;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

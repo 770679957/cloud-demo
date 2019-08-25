@@ -1,4 +1,4 @@
-package cn.itcast.microservice.order.pojo;
+package cn.yyw.microservice.order.pojo;
 
 import java.util.Date;
 import java.util.List;

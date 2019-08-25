@@ -1,7 +1,7 @@
-package cn.itcast.microservice.order.controller;
+package cn.yyw.microservice.order.controller;
 
-import cn.itcast.microservice.order.pojo.Order;
-import cn.itcast.microservice.order.service.OrderService;
+import cn.yyw.microservice.order.pojo.Order;
+import cn.yyw.microservice.order.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

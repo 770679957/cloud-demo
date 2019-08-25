@@ -1,6 +1,6 @@
 //package cn.itcast.microservice.order.feign;
 //
-//import cn.itcast.microservice.order.pojo.Item;
+//import Item;
 //import org.springframework.cloud.netflix.feign.FeignClient;
 //import org.springframework.web.bind.annotation.PathVariable;
 //import org.springframework.web.bind.annotation.RequestMapping;

@@ -1,4 +1,4 @@
-package cn.itcast.microservice.order.properties;
+package cn.yyw.microservice.order.properties;
 
 /**
  * @author win10
