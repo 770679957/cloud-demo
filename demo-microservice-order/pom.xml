@@ -58,6 +58,13 @@
             <artifactId>spring-cloud-starter-hystrix</artifactId>
         </dependency>
 
+        <!--引入Feign-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-feign</artifactId>
+        </dependency>
+
+
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
