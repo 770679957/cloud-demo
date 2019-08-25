@@ -18,6 +18,8 @@
         <module>demo-microservice-item</module>
         <module>demo-microservice-order</module>
         <module>demo-microservice-eureka</module>
+        <module>demo-microsrvice-api-gateway</module>
+        <module>demo-microservice-config-server</module>
     </modules>
 
 </project>

@@ -9,9 +9,10 @@ import org.springframework.cloud.config.server.EnableConfigServer;
  * @author win10
  * @EnableConfigServer 开启配置服务
  */
-@EnableDiscoveryClient
-@EnableConfigServer
+
 @SpringBootApplication
+@EnableConfigServer
+@EnableDiscoveryClient
 public class ConfigApplication {
 
 	public static void main(String[] args) {

@@ -6,9 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="demo-microservice-config-server" />
         <module name="demo-microservice-eureka" />
         <module name="demo-microservice-item" />
         <module name="demo-microservice-order" />
+        <module name="demo-microsrvice-api-gateway" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
