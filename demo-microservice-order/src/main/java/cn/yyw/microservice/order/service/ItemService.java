@@ -2,6 +2,7 @@ package cn.yyw.microservice.order.service;
 
 import cn.yyw.microservice.order.properties.OrderProerties;
 import cn.yyw.microservice.order.pojo.Item;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.stereotype.Service;
@@ -28,21 +29,17 @@ public class ItemService {
 	private DiscoveryClient discoveryClient;
 
 
-
+	@HystrixCommand(fallbackMethod = "queryItemByIdFallbackMethod") // 进行容错处理
 	public Item queryItemById(Long id) {
 		//return this.restTemplate.getForObject(this.orderProerties.getItem().getUrl() + id, Item.class);
-
 		String serviceId = "demo-microservice-item";
-		List<ServiceInstance> instances = discoveryClient.getInstances(serviceId);
-		if(instances.isEmpty()){
-			return null;
-		}
-		// 为了演示，在这里只获取一个实例
-		ServiceInstance serviceInstance = instances.get(0);
-		String url = serviceInstance.getHost() + ":" + serviceInstance.getPort();
-		System.out.print(url);
-		return this.restTemplate.getForObject("http://" + url + "/item/" + id, Item.class);
+		return this.restTemplate.getForObject("http://" + serviceId + "/item/" + id, Item.class);
 	}
+
+	public Item queryItemByIdFallbackMethod(Long id){ // 请求失败执行的方法
+		return new Item(id, "查询商品信息出错!", null, null, null);
+	}
+
 
 }
 
